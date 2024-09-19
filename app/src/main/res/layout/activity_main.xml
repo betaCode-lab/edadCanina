@@ -22,11 +22,27 @@
         android:textSize="20sp"/>
 
     <EditText
+        android:id="@+id/age"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Edad actual"
         android:padding="16dp"
         android:inputType="number"/>
 
+    <TextView
+        android:id="@+id/text_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:padding="16dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/black"/>
 
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        android:id="@+id/btnCalcular"
+        android:layout_margin="16dp"/>
 </LinearLayout>
