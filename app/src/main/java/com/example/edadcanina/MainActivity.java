@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,10 +32,14 @@ public class MainActivity extends AppCompatActivity {
         btnCalculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int dogAge = Integer.parseInt(age.getText().toString());
-                int result = dogAge * 7;
-                String resultStr = "La edad del can es " + result + " años.";
-                textResult.setText(resultStr);
+                if(!age.getText().toString().isEmpty()){
+                    int dogAge = Integer.parseInt(age.getText().toString());
+                    int result = dogAge * 7;
+                    String resultStr = "La edad del can es " + result + " años.";
+                    textResult.setText(resultStr);
+                } else {
+                    Toast.makeText(MainActivity.this, "La edad es obligatoria.", Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
